@@ -12,3 +12,6 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+sandbox/build/tmp/compileJava/source-classes-mapping.txt
+sandbox/build/classes/java/main/ru/stqa/pft/sandbox/MyFirstProject.class
+sandbox/build/classes/java/main/MyFirstProject.class

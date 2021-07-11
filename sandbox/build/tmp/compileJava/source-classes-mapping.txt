@@ -1,2 +1,2 @@
 MyFirstProject.java
- MyFirstProject
+ ru.stqa.pft.sandbox.MyFirstProject
