@@ -1,2 +1,4 @@
+Point.java
+ Point
 MyFirstProject.java
  ru.stqa.pft.sandbox.MyFirstProject
