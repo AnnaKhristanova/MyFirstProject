@@ -1,4 +1,4 @@
-package ru.stqa.pft.sandbox;
+
 
 import java.awt.*;
 
@@ -8,11 +8,9 @@ public class MyFirstProject {
 
     public static void main(String[] args) {
 
-        Point p1 = new Point(0,6);
+        Point p1 = new Point(0,7);
         Point p2 = new Point(0,0);
 
         System.out.println(p1.distance(p2));
     }
-
-
 }

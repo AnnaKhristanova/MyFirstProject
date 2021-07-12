@@ -1,6 +1,6 @@
 Lesson1Task2Part1Function.java
  Lesson1Task2Part1Function
+test/Anna/lessons/MyFirstProject.java
+ MyFirstProject
 Point.java
  Point
-MyFirstProject.java
- ru.stqa.pft.sandbox.MyFirstProject
