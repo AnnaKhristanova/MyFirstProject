@@ -5,16 +5,15 @@ public class Point {
 public static double x;
 public static double y;
 
-public Point (double x, double y){
+    public Point (double x, double y){
     this.x=x;
     this.y=y;
-
 }
 
-    public double distance()
+    public double distance(Point p2)
 
     {
-        return sqrt((this.y - this.y) * (this.y - this.y) + (this.x - this.x) * (this.x - this.x));
+        return sqrt((p2.y - y) * (p2.y - y) + (p2.x - x) * (p2.x - x));
     }
 
 }
