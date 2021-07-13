@@ -1,2 +1,0 @@
-test/Anna/lessons/PointTests.java
- test.Anna.lessons.PointTests
