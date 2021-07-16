@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aadf9a3a-9496-4da2-a30f-21dac28bc518" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandbox/build/classes/java/main/MyFirstProject1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/build/classes/java/main/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/build/classes/java/main/Point.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sandbox/src/main/java/MyFirstProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/src/main/java/MyFirstProject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandbox/src/test/java/test/Anna/lessons/PointTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/src/main/java/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/src/main/java/Point.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +123,7 @@
       <workItem from="1626210731134" duration="1612000" />
       <workItem from="1626214456448" duration="634000" />
       <workItem from="1626215348774" duration="800000" />
-      <workItem from="1626216205045" duration="356000" />
+      <workItem from="1626216205045" duration="6251000" />
     </task>
     <servers />
   </component>
