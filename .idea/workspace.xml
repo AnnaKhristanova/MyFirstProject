@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="aadf9a3a-9496-4da2-a30f-21dac28bc518" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandbox/build/classes/java/main/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/build/classes/java/main/Point.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandbox/src/main/java/MyFirstProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/src/main/java/MyFirstProject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandbox/src/main/java/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/src/main/java/Point.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +82,7 @@
     <property name="project.structure.proportion" value="0.11904764" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.PointTests">
     <configuration name="MyFirstProject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MyFirstProject" />
       <module name="sandbox.main" />
@@ -106,8 +103,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PointTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/sandbox" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;PointTests&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.PointTests" />
         <item itemvalue="Application.MyFirstProject" />
       </list>
     </recent_temporary>
@@ -123,7 +142,7 @@
       <workItem from="1626210731134" duration="1612000" />
       <workItem from="1626214456448" duration="634000" />
       <workItem from="1626215348774" duration="800000" />
-      <workItem from="1626216205045" duration="6251000" />
+      <workItem from="1626216205045" duration="7116000" />
     </task>
     <servers />
   </component>
