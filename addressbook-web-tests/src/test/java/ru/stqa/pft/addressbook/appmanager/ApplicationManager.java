@@ -1,7 +1,6 @@
 package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -11,13 +10,10 @@ import java.util.concurrent.TimeUnit;
 public class ApplicationManager {
 
     WebDriver wd;
-private SessionHelper sessionHelper;
+    private SessionHelper sessionHelper;
     private NavigationHelper navigationHelper;
     private GroupHelper groupHelper;
-
-    private String getAdmin() {
-      return "admin";
-    }
+    private ContactHelper contactHelper;
 
     public void init() {
         wd = new FirefoxDriver();
@@ -26,7 +22,8 @@ private SessionHelper sessionHelper;
         groupHelper = new GroupHelper(wd);
         navigationHelper = new NavigationHelper(wd);
         sessionHelper = new SessionHelper(wd);
-        sessionHelper.login("admin", "secret");
+        contactHelper = new ContactHelper(wd);
+        sessionHelper.login("admin",  "secret");
     }
 
     public void stops() {
@@ -49,4 +46,6 @@ private SessionHelper sessionHelper;
     public NavigationHelper getNavigationHelper() {
         return navigationHelper;
     }
+
+    public ContactHelper getContactHelper() {return contactHelper;}
 }

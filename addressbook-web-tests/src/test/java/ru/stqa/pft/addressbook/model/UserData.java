@@ -1,31 +1,31 @@
 package ru.stqa.pft.addressbook.model;
 
 public class UserData {
-    private final CharSequence firstname;
-    private final CharSequence lastname;
-    private final CharSequence address;
-    private final CharSequence home;
+    private final String firstname;
+    private final String lastname;
+    private final String address;
+    private final String home;
 
-    public UserData(CharSequence firstname, CharSequence lastname, CharSequence address, CharSequence home) {
+    public UserData(String firstname, String lastname, String address, String home) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.address = address;
         this.home = home;
     }
 
-    public CharSequence getFirstname() {
+    public String getFirstname() {
         return firstname;
     }
 
-    public CharSequence getLastname() {
+    public String getLastname() {
         return lastname;
     }
 
-    public CharSequence getAddress() {
+    public String getAddress() {
         return address;
     }
 
-    public CharSequence getHome() {
+    public String getHome() {
         return home;
     }
 }
