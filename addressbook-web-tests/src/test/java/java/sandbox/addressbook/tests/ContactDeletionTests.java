@@ -1,6 +1,5 @@
-package ru.stqa.pft.addressbook.tests;
+package ru.stqa.pft.sandbox.addressbook.tests;
 
-import net.bytebuddy.matcher.ElementMatcher;
 import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertTrue;

@@ -1,8 +1,8 @@
-package ru.stqa.pft.addressbook.appmanager;
+package ru.stqa.pft.sandbox.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import ru.stqa.pft.addressbook.model.UserData;
+import ru.stqa.pft.sandbox.addressbook.model.UserData;
 
 public class ContactHelper extends HelperBase{
 

@@ -1,6 +1,5 @@
-package ru.stqa.pft.addressbook.appmanager;
+package ru.stqa.pft.sandbox.addressbook.appmanager;
 
-import net.bytebuddy.matcher.ElementMatcher;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;

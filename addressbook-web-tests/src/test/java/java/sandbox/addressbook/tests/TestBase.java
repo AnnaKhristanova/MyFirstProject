@@ -1,8 +1,8 @@
-package ru.stqa.pft.addressbook.tests;
+package ru.stqa.pft.sandbox.addressbook.tests;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import ru.stqa.pft.addressbook.appmanager.ApplicationManager;
+import ru.stqa.pft.sandbox.addressbook.appmanager.ApplicationManager;
 
 public class TestBase {
 
