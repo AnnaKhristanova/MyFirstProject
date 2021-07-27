@@ -36,4 +36,13 @@ public class ContactHelper extends HelperBase{
     public void AssertTrue() {
         wd.switchTo().alert().accept();
     }
+
+    public void createContact(UserData contact) {
+        addNewContact();
+        fillContactForm(new UserData("Anna", "Khristanova", "Petrozavodsk", "888"));
+    }
+
+    public boolean isThereGroup() {
+        return isElementPresent(By.xpath("//tr[3]/td/input"));
+    }
 }
