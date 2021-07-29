@@ -18,7 +18,7 @@ public class ContactHelper extends HelperBase{
         click(By.xpath("//div[@id='content']/form/input[21]"));
     }
 
-    public void initContactModification() {click(By.xpath("//tr[3]/td[8]/a/img"));
+    public void initContactModification() {click(By.xpath("//img[@alt='Edit']"));
     }
 
     public void submitContactModification() {click(By.xpath("//div[@id='content']/form/input[22]"));
@@ -27,7 +27,7 @@ public class ContactHelper extends HelperBase{
     public void deleteContactModification() {click(By.xpath("//div[@id='content']/form[2]/input[2]"));
     }
 
-    public void selectContactHomePage() {click(By.xpath("//tr[3]/td/input"));
+    public void selectContactHomePage() {click(By.name("selected[]"));
     }
 
     public void deleteContactHomePage() {click(By.xpath("//input[@value='Delete']"));
@@ -43,6 +43,6 @@ public class ContactHelper extends HelperBase{
     }
 
     public boolean isThereGroup() {
-        return isElementPresent(By.xpath("//tr[3]/td/input"));
+        return isElementPresent(By.name("selected[]"));
     }
 }
