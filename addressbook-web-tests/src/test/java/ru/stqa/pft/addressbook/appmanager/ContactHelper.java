@@ -11,6 +11,8 @@ import java.util.List;
 
 public class ContactHelper extends HelperBase{
 
+    private int index;
+
     public ContactHelper(WebDriver wd) {
         super(wd);
     }
@@ -23,7 +25,7 @@ public class ContactHelper extends HelperBase{
         click(By.xpath("//div[@id='content']/form/input[21]"));
     }
 
-    public void initContactModification() {click(By.xpath("//img[@alt='Edit']"));
+    public void initContactModification(int index) {click(By.xpath("//img[@alt='Edit']"));
     }
 
     public void submitContactModification() {click(By.xpath("//div[@id='content']/form/input[22]"));
@@ -32,7 +34,9 @@ public class ContactHelper extends HelperBase{
     public void deleteContactModification() {click(By.xpath("//div[@id='content']/form[2]/input[2]"));
     }
 
-    public void selectContactHomePage() {click(By.name("selected[]"));
+    public void selectContactHomePage(int index) {
+        this.index = index;
+        click(By.name("selected[]"));
     }
 
     public void deleteContactHomePage() {click(By.xpath("//input[@value='Delete']"));
