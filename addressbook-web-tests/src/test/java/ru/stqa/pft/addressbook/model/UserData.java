@@ -3,12 +3,8 @@ package ru.stqa.pft.addressbook.model;
 import java.util.Objects;
 
 public class UserData {
-    private int id;
+    private final int id;
     private final String firstname;
-
-    public void setId(int id) {
-        this.id = id;
-    }
     private final String lastname;
     private final String address;
     private final String home;
