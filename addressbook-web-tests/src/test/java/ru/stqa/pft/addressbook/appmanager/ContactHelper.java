@@ -12,6 +12,7 @@ import java.util.List;
 public class ContactHelper extends HelperBase{
 
     public int index;
+    public UserData contact;
 
     public ContactHelper(WebDriver wd) {
         super(wd);
@@ -43,13 +44,31 @@ public class ContactHelper extends HelperBase{
     public void deleteContactHomePage() {click(By.xpath("//input[@value='Delete']"));
     }
 
+    public void goToHomePage() {click(By.linkText("home"));
+    }
+
     public void AssertTrue() {
         wd.switchTo().alert().accept();
     }
 
     public void createContact(UserData contact) {
+        this.contact = contact;
         addNewContact();
         fillContactForm(new UserData("Anna", "Khristanova", "Petrozavodsk", "888"));
+    }
+
+    public void modifyContact(int index, UserData user1) {
+        initContactModification(index);
+        fillContactForm(user1);
+        submitContactModification();
+        goToHomePage();
+    }
+
+    public void deleteContact() {
+        selectContactHomePage();
+        deleteContactHomePage();
+        AssertTrue();
+        goToHomePage();
     }
 
     public boolean isThereGroup() {
