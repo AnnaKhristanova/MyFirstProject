@@ -24,7 +24,7 @@ public class ContactModificationTests extends TestBase{
     public void testGroupModification() {
         List<UserData> before = app.getContactHelper().getContactList();
         int index = before.size() - 1;
-        UserData user1 = new UserData(before.get(index).getId(),"Anna300","Khristanova300", "Petrozavodsk1", "888");
+        UserData user1 = new UserData(before.get(index).getId(),"Anna500","Khristanova500", "Petrozavodsk1", "888");
         app.getContactHelper().modifyContact(index, user1);
         List<UserData> after = app.getContactHelper().getContactList();
         before.remove(index);
