@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="aadf9a3a-9496-4da2-a30f-21dac28bc518" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/GroupHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/GroupHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/NavigationHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/NavigationHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactCreationsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactCreationsTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactDeletionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactDeletionTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactModificationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactModificationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/GroupData.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/GroupData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationsTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupDeletionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupDeletionTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupModificationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupModificationTests.java" afterDir="false" />
@@ -109,7 +104,7 @@
       <recent name="java" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ContactModificationTests">
+  <component name="RunManager" selected="Gradle.Tests in 'ru.stqa.pft.addressbook.tests'">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -230,9 +225,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'ru.stqa.pft.addressbook.tests'" />
         <item itemvalue="Gradle.ContactModificationTests" />
         <item itemvalue="Gradle.ContactCreationsTests" />
-        <item itemvalue="Gradle.Tests in 'ru.stqa.pft.addressbook.tests'" />
         <item itemvalue="Gradle.ContactDeletionTests" />
         <item itemvalue="Gradle.GroupCreationsTests" />
       </list>
@@ -270,7 +265,7 @@
       <workItem from="1628161599160" duration="5264000" />
       <workItem from="1628242547171" duration="3320000" />
       <workItem from="1628495410583" duration="874000" />
-      <workItem from="1628619771591" duration="1629000" />
+      <workItem from="1628619771591" duration="2876000" />
     </task>
     <servers />
   </component>
