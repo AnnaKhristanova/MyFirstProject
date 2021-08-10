@@ -3,7 +3,6 @@ package ru.stqa.pft.addressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.UserData;
 
 import java.util.ArrayList;
@@ -17,7 +16,7 @@ public class ContactHelper extends HelperBase{
     public ContactHelper(WebDriver wd) {
         super(wd);
     }
-    public void addNewContact() {click(By.linkText("add new"));}
+    public void addNew() {click(By.linkText("add new"));}
     public void fillContactForm(UserData userData) {
         type(By.name("firstname"), userData.getFirstname());
         type(By.name("lastname"), userData.getLastname());
@@ -50,31 +49,32 @@ public class ContactHelper extends HelperBase{
         wd.switchTo().alert().accept();
     }
 
-    public void createContact(UserData contact) {
-        this.contact = contact;
-        addNewContact();
-        fillContactForm(new UserData("Anna", "Khristanova", "Petrozavodsk", "888"));
+    public void create(UserData user) {
+        addNew();
+        fillContactForm(user);
+        goToHomePage();
     }
 
-    public void modifyContact(int index, UserData user1) {
+    public void modify(int index, UserData user1) {
         initContactModification(index);
         fillContactForm(user1);
         submitContactModification();
         goToHomePage();
     }
 
-    public void deleteContact() {
+    public void delete() {
         selectContactHomePage();
         deleteContactHomePage();
         AssertTrue();
         goToHomePage();
     }
 
+
     public boolean isThereGroup() {
         return isElementPresent(By.name("selected[]"));
     }
 
-    public List<UserData> getContactList() {
+    public List<UserData> list() {
         List<UserData> users = new ArrayList<UserData>();
         List<WebElement> elements = wd.findElements(By.cssSelector("tr[name=\"entry\"]"));
         for (WebElement element: elements) {

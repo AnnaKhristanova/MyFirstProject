@@ -2,7 +2,6 @@ package ru.stqa.pft.addressbook.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
-import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.UserData;
 
 import java.util.Comparator;
@@ -12,13 +11,11 @@ public class ContactCreationsTests extends TestBase{
 
   @Test
   public void UserCreationTests() throws Exception {
-    app.getContactHelper().goToHomePage();
-    List<UserData> before = app.getContactHelper().getContactList();
-    app.getContactHelper().addNewContact();
+    app.contact().goToHomePage();
+    List<UserData> before = app.contact().list();
     UserData user = new UserData("Anna", "Khristanova", "Petrozavodsk", "888");
-    app.getContactHelper().fillContactForm(user);
-    app.getContactHelper().goToHomePage();
-    List<UserData> after = app.getContactHelper().getContactList();
+    app.contact().create(user);
+    List<UserData> after = app.contact().list();
     Assert.assertEquals(after.size(), before.size() + 1);
     before.add(user);
     Comparator<? super UserData> byId = (g1, g2) -> Integer.compare(g1.getId(), g2.getId()) ;
@@ -26,5 +23,7 @@ public class ContactCreationsTests extends TestBase{
     after.sort(byId);
     Assert.assertEquals(before, after);
   }
+
+
 
 }
