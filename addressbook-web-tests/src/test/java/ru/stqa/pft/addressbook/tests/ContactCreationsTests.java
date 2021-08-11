@@ -13,7 +13,8 @@ public class ContactCreationsTests extends TestBase{
   public void UserCreationTests() throws Exception {
     app.contact().goToHomePage();
     List<UserData> before = app.contact().list();
-    UserData user = new UserData("Anna", "Khristanova", "Petrozavodsk", "888");
+    UserData user = new UserData()
+            .withFirstname("Anna").withLastname("Khristanova").withAddress("Petrozavodsk").withHome("888");
     app.contact().create(user);
     List<UserData> after = app.contact().list();
     Assert.assertEquals(after.size(), before.size() + 1);

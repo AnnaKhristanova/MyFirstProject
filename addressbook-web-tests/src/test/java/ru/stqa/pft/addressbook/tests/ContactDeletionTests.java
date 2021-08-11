@@ -15,17 +15,18 @@ public class ContactDeletionTests extends TestBase{
     public void ensurePreconditions() {
         app.contact().goToHomePage();
         if (app.contact().list().size() == 0) {
-            app.contact().create(new UserData("Anna", "Khristanova", "Petrozavodsk", "888"));
+            app.contact().create(new UserData()
+                    .withFirstname("Anna").withLastname("Khristanova").withAddress("Petrozavodsk").withHome("888"));
         }
 
     }
-    @Test(enabled = false)
-    public void testContactDeletion(){
+    @Test
+    public void testContactDeletion() throws Exception {
 
         List<UserData> before = app.contact().list();
+        int index = before.size() - 1;
         app.contact().delete();
         List<UserData> after = app.contact().list();
-        int index = before.size() - 1;
         Assert.assertEquals(after.size(), before.size() - 1);
         before.remove(index);
         Assert.assertEquals(before, after);
