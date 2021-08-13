@@ -4,14 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import ru.stqa.pft.addressbook.model.UserData;
-
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class ContactHelper extends HelperBase{
 
-    public int index;
-    public UserData contact;
+
+    private UserData user;
 
     public ContactHelper(WebDriver wd) {
         super(wd);
@@ -30,9 +30,6 @@ public class ContactHelper extends HelperBase{
     }
 
     public void submitContactModification() {click(By.xpath("//div[@id='content']/form/input[22]"));
-    }
-
-    public void deleteContactModification() {click(By.xpath("//div[@id='content']/form[2]/input[2]"));
     }
 
     public void selectContactHomePage() {
@@ -55,18 +52,28 @@ public class ContactHelper extends HelperBase{
         goToHomePage();
     }
 
-    public void modify(int index, UserData user1) {
-        initContactModification(index);
-        fillContactForm(user1);
+    public void modify(UserData user) {
+        initContactModificationById(user.getId());
+        fillContactForm(user);
         submitContactModification();
         goToHomePage();
     }
 
-    public void delete() {
-        selectContactHomePage();
+    private void initContactModificationById(int id)  {
+        wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
+        wd.findElement(By.xpath("//img[@alt='Edit']")).click();
+    }
+
+    public void delete(UserData user) {
+        selectContactHomePageById(user.getId());
         deleteContactHomePage();
         AssertTrue();
         goToHomePage();
+    }
+
+    private void selectContactHomePageById(int id) {
+        wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
+
     }
 
 
@@ -74,8 +81,8 @@ public class ContactHelper extends HelperBase{
         return isElementPresent(By.name("selected[]"));
     }
 
-    public List<UserData> list() {
-        List<UserData> users = new ArrayList<UserData>();
+    public Set<UserData> all() {
+        Set<UserData> users = new HashSet<>();
         List<WebElement> elements = wd.findElements(By.cssSelector("tr[name=\"entry\"]"));
         for (WebElement element: elements) {
             String lastname = element.findElement(By.cssSelector("td:nth-child(2)")).getText();
