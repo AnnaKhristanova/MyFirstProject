@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import ru.stqa.pft.addressbook.model.UserData;
+import ru.stqa.pft.addressbook.model.Users;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -81,8 +83,8 @@ public class ContactHelper extends HelperBase{
         return isElementPresent(By.name("selected[]"));
     }
 
-    public Set<UserData> all() {
-        Set<UserData> users = new HashSet<>();
+    public Users all() {
+        Users users = new Users();
         List<WebElement> elements = wd.findElements(By.cssSelector("tr[name=\"entry\"]"));
         for (WebElement element: elements) {
             String lastname = element.findElement(By.cssSelector("td:nth-child(2)")).getText();
