@@ -3,12 +3,11 @@ package ru.stqa.pft.addressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import ru.stqa.pft.addressbook.model.Groups;
 import ru.stqa.pft.addressbook.model.UserData;
 import ru.stqa.pft.addressbook.model.Users;
-
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+
 
 public class ContactHelper extends HelperBase{
 
@@ -51,6 +50,7 @@ public class ContactHelper extends HelperBase{
     public void create(UserData user) {
         addNew();
         fillContactForm(user);
+        contactCache = null;
         goToHomePage();
     }
 
@@ -58,6 +58,7 @@ public class ContactHelper extends HelperBase{
         initContactModificationById(user.getId());
         fillContactForm(user);
         submitContactModification();
+        contactCache = null;
         goToHomePage();
     }
 
@@ -70,6 +71,7 @@ public class ContactHelper extends HelperBase{
         selectContactHomePageById(user.getId());
         deleteContactHomePage();
         AssertTrue();
+        contactCache = null;
         goToHomePage();
     }
 
@@ -83,17 +85,23 @@ public class ContactHelper extends HelperBase{
         return isElementPresent(By.name("selected[]"));
     }
 
+    private Users contactCache = null;
+
+
     public Users all() {
-        Users users = new Users();
+
+         if (contactCache != null){
+             return new Users(contactCache);
+         }
+        contactCache = new Users();
         List<WebElement> elements = wd.findElements(By.cssSelector("tr[name=\"entry\"]"));
         for (WebElement element: elements) {
             String lastname = element.findElement(By.cssSelector("td:nth-child(2)")).getText();
             String firstname = element.findElement(By.cssSelector("td:nth-child(3)")).getText();
             int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute( "value"));
-            users.add(new UserData().withId(id)
+            contactCache.add(new UserData().withId(id)
                     .withFirstname(firstname).withLastname(lastname));
         }
-        return users;
-
+        return new Users(contactCache);
     }
 }
