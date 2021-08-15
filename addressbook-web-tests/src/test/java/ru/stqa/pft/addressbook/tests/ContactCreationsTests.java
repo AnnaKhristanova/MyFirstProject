@@ -1,11 +1,8 @@
 package ru.stqa.pft.addressbook.tests;
 
-import org.testng.Assert;
 import org.testng.annotations.*;
 import ru.stqa.pft.addressbook.model.UserData;
 import ru.stqa.pft.addressbook.model.Users;
-
-import java.util.Set;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -18,7 +15,7 @@ public class ContactCreationsTests extends TestBase{
     app.contact().goToHomePage();
     Users before = app.contact().all();
     UserData user = new UserData()
-            .withFirstname("Anna2000").withLastname("Khristanova2000").withAddress("Petrozavodsk").withHome("888");
+            .withFirstname("Anna2000").withLastname("Khristanova2000").withAddress("Petrozavodsk").withHomePhone("888");
     app.contact().create(user);
     assertThat(app.contact().count(), equalTo(before.size() + 1));
     Users after = app.contact().all();
