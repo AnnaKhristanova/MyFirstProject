@@ -20,8 +20,8 @@ public class ContactCreationsTests extends TestBase{
     UserData user = new UserData()
             .withFirstname("Anna2000").withLastname("Khristanova2000").withAddress("Petrozavodsk").withHome("888");
     app.contact().create(user);
+    assertThat(app.contact().count(), equalTo(before.size() + 1));
     Users after = app.contact().all();
-    assertThat(after.size(), equalTo(before.size() + 1));
     assertThat(after, equalTo(before.withAdded(user.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
   }
 }

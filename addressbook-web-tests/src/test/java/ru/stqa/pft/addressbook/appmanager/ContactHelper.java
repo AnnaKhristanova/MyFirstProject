@@ -26,15 +26,7 @@ public class ContactHelper extends HelperBase{
         click(By.xpath("//div[@id='content']/form/input[21]"));
     }
 
-    public void initContactModification(int index) {
-        wd.findElements(By.xpath("//img[@alt='Edit']")).get(index).click();
-    }
-
     public void submitContactModification() {click(By.xpath("//div[@id='content']/form/input[22]"));
-    }
-
-    public void selectContactHomePage() {
-        click(By.name("selected[]"));
     }
 
     public void deleteContactHomePage() {click(By.xpath("//input[@value='Delete']"));
@@ -83,6 +75,9 @@ public class ContactHelper extends HelperBase{
 
     public boolean isThereGroup() {
         return isElementPresent(By.name("selected[]"));
+    }
+    public int count() {
+        return  wd.findElements(By.name("selected[]")).size();
     }
 
     private Users contactCache = null;

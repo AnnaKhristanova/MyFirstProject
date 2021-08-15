@@ -24,16 +24,15 @@ public class ContactModificationTests extends TestBase{
     @Test
     public void testGroupModification() {
         Users before = app.contact().all();
+        System.out.println("before=" + app.contact().all());
         UserData modifiedContact = before.iterator().next();
         UserData user = new UserData()
                 .withId(modifiedContact.getId())
-                .withFirstname("Anna800").withLastname("Khristanova800").withAddress("Petrozavodsk").withHome("888");
+                .withFirstname("Anna500").withLastname("Khristanova500").withAddress("Petrozavodsk").withHome("888");
         app.contact().modify(user);
+        assertThat(app.contact().count(), equalTo(before.size()));
         Users after = app.contact().all();
-        assertEquals(after.size(), before.size());
+        System.out.println("after=" + app.contact().all());
         assertThat(after, equalTo(before.without(modifiedContact).withAdded(user)));
-
     }
-
-
 }
