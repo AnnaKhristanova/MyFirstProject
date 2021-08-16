@@ -11,6 +11,11 @@ public class UserData {
     private  String home;
     private String mobile;
     private String work;
+    private String allPhones;
+    private String email;
+    private String email2;
+    private String email3;
+    private String allEmails;
 
     public UserData withId(int id) {
         this.id = id;
@@ -45,7 +50,26 @@ public class UserData {
         this.work = work;
         return this;
     }
-
+    public UserData withAllPhones(String allPhones) {
+        this.allPhones = allPhones;
+        return this;
+    }
+    public UserData withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    public UserData withEmail2(String email2) {
+        this.email2 = email2;
+        return this;
+    }
+    public UserData withEmail3(String email3) {
+        this.email3 = email3;
+        return this;
+    }
+    public UserData withEmails(String allEmails) {
+        this.allEmails = allEmails;
+        return this;
+    }
 
     public int getId() {
         return id;
@@ -59,9 +83,7 @@ public class UserData {
         return lastname;
     }
 
-    public String getAddress() {
-        return address;
-    }
+    public String getAddress() {return address;}
 
     public String getHomePhone() {
         return home;
@@ -70,6 +92,16 @@ public class UserData {
     public String getMobilePhone() {return mobile;}
 
     public String getWorkPhone() {return work;}
+
+    public String getAllPhones() {return allPhones;}
+
+    public String getEmail() {return email;}
+    public String getEmail2() {return email2;}
+
+    public String getEmail3() {return email3;}
+
+    public String getAllEmails() {return allEmails;}
+
 
     @Override
     public String toString() {
