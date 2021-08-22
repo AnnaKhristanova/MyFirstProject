@@ -22,6 +22,7 @@ public class ContactHelper extends HelperBase{
         type(By.name("lastname"), userData.getLastname());
         type(By.name("address"), userData.getAddress());
         type(By.name("home"), userData.getHomePhone());
+        attach(By.name("photo"), userData.getPhoto());
         click(By.xpath("//div[@id='content']/form/input[21]"));
     }
 
