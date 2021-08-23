@@ -266,7 +266,7 @@
       <workItem from="1629439952707" duration="100000" />
       <workItem from="1629649076691" duration="4249000" />
       <workItem from="1629653976101" duration="1287000" />
-      <workItem from="1629655341738" duration="4749000" />
+      <workItem from="1629655341738" duration="10284000" />
     </task>
     <servers />
   </component>
@@ -350,6 +350,16 @@
           <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/generators/UserDataGenerator.java</url>
           <line>49</line>
           <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationsTests.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationsTests.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
