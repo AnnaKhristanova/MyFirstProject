@@ -1,0 +1,14 @@
+<list>
+  <user>
+    <firstname>firstname 0</firstname>
+    <lastname>lastname 0</lastname>
+  </user>
+  <user>
+    <firstname>firstname 1</firstname>
+    <lastname>lastname 1</lastname>
+  </user>
+  <user>
+    <firstname>firstname 2</firstname>
+    <lastname>lastname 2</lastname>
+  </user>
+</list>
