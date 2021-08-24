@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aadf9a3a-9496-4da2-a30f-21dac28bc518" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/generators/UserDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/generators/UserDataGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/UserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactCreationsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactCreationsTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +103,7 @@
       <recent name="ru.stqa.pft.addressbook.tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.UserDataGenerator">
+  <component name="RunManager" selected="Gradle.ContactCreationsTests">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -219,11 +219,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ContactCreationsTests" />
         <item itemvalue="Gradle.GroupCreationsTests" />
         <item itemvalue="Gradle.GroupCreationsTests.testGroupCreations" />
         <item itemvalue="Application.UserDataGenerator" />
         <item itemvalue="Application.GroupDataGenerator" />
-        <item itemvalue="Gradle.ContactCreationsTests" />
       </list>
     </recent_temporary>
   </component>
@@ -267,7 +267,7 @@
       <workItem from="1629649076691" duration="4249000" />
       <workItem from="1629653976101" duration="1287000" />
       <workItem from="1629655341738" duration="13338000" />
-      <workItem from="1629826966000" duration="2934000" />
+      <workItem from="1629826966000" duration="3694000" />
     </task>
     <servers />
   </component>
@@ -334,12 +334,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactCreationsTests.java</url>
-          <line>29</line>
+          <line>52</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactCreationsTests.java</url>
-          <line>20</line>
+          <line>43</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
