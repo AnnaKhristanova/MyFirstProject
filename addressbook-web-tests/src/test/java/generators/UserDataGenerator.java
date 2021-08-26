@@ -52,19 +52,18 @@ public class UserDataGenerator {
         XStream xStream = new XStream();
         xStream.processAnnotations(UserData.class);
         String xml = xStream.toXML(users);
-        Writer writer = new FileWriter(file);
-        writer.write(xml);
-        writer.close();
-
+       try( Writer writer = new FileWriter(file)){
+           writer.write(xml);
+       }
     }
 
     private  void saveAsCsv(List<UserData> users, File file) throws IOException {
         System.out.println(new File(".").getAbsolutePath());
-        Writer writer = new FileWriter(file);
-        for (UserData user : users){
-            writer.write(String.format("%s,%s \n", user.getFirstname(), user.getLastname()));
+        try(Writer writer = new FileWriter(file)){
+            for (UserData user : users){
+                writer.write(String.format("%s,%s \n", user.getFirstname(), user.getLastname()));
+            }
         }
-        writer.close();
     }
 
     private  List<UserData> generateUsers(int count) {
