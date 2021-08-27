@@ -1,7 +1,6 @@
 package ru.stqa.pft.addressbook.tests;
 
 import org.testng.annotations.*;
-import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.UserData;
 import ru.stqa.pft.addressbook.model.Users;
 import com.thoughtworks.xstream.XStream;
@@ -16,7 +15,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.thoughtworks.xstream.XStream.setupDefaultSecurity;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -40,11 +38,11 @@ public class ContactCreationsTests extends TestBase{
 
   @Test(dataProvider = "validUsers")
   public void UserCreationTests(UserData user) throws Exception {
-    app.contact().goToHomePage();
-    Users before = app.contact().all();
-    app.contact().create(user);
-    assertThat(app.contact().count(), equalTo(before.size() + 1));
-    Users after = app.contact().all();
+    app.get().contact().goToHomePage();
+    Users before = app.get().contact().all();
+    app.get().contact().create(user);
+    assertThat(app.get().contact().count(), equalTo(before.size() + 1));
+    Users after = app.get().contact().all();
     assertThat(after, equalTo(before.withAdded(user.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
   }
 

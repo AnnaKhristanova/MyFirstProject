@@ -12,9 +12,9 @@ public class ContactPhoneTest extends TestBase {
 
     @BeforeMethod
     public void ensurePreconditions() {
-        app.contact().goToHomePage();
-        if (app.contact().all().size() == 0) {
-            app.contact().create(new UserData()
+        app.get().contact().goToHomePage();
+        if (app.get().contact().all().size() == 0) {
+            app.get().contact().create(new UserData()
                     .withFirstname("Anna").withLastname("Khristanova").withAddress("Petrozavodsk").withHomePhone("888"));
         }
 
@@ -22,8 +22,8 @@ public class ContactPhoneTest extends TestBase {
     @Test
     public void testContactPhones(){
 
-        UserData user = app.contact().all().iterator().next();
-        UserData userInfoFromEditForm = app.contact().InfoFromEditForm(user);
+        UserData user = app.get().contact().all().iterator().next();
+        UserData userInfoFromEditForm = app.get().contact().InfoFromEditForm(user);
 
         assertThat(user.getAllPhones(), equalTo(mergePhones(userInfoFromEditForm)));
 
