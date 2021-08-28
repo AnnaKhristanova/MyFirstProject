@@ -36,11 +36,11 @@ public Iterator<Object[]> validGroups() throws IOException {
 
   @Test(dataProvider = "validGroups")
   public void testGroupCreations(GroupData group) throws Exception {
-  app.get().goTo().groupPage();
-  Groups before = app.get().group().all();
-  app.get().group().create(group);
-  assertThat(app.get().group().count(), equalTo(before.size() + 1));
-  Groups after = app.get().group().all();
+  app.goTo().groupPage();
+  Groups before = app.group().all();
+  app.group().create(group);
+  assertThat(app.group().count(), equalTo(before.size() + 1));
+  Groups after = app.group().all();
   assertThat(after, equalTo(before
           .withAdded(group.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
 
@@ -49,12 +49,12 @@ public Iterator<Object[]> validGroups() throws IOException {
   @Test(enabled = false)
   public void testBudGroupCreations() throws Exception {
 
-    app.get().goTo().groupPage();
-    Groups before = app.get().group().all();
+    app.goTo().groupPage();
+    Groups before = app.group().all();
     GroupData group = new GroupData().withName("test2'");
-    app.get().group().create(group);
-    assertThat(app.get().group().count(), equalTo(before.size()));
-    Groups after = app.get().group().all();
+    app.group().create(group);
+    assertThat(app.group().count(), equalTo(before.size()));
+    Groups after = app.group().all();
     assertThat(after, equalTo(before));
   }
 }

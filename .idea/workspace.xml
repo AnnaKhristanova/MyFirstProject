@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aadf9a3a-9496-4da2-a30f-21dac28bc518" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/resources/local.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactAddressTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactAddressTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactCreationsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactCreationsTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactDeletionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactDeletionTests.java" afterDir="false" />
@@ -18,7 +15,6 @@
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationsTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupDeletionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupDeletionTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupModificationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupModificationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/resources/testng-contacts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/resources/testng-contacts.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +132,7 @@
       <recent name="ru.stqa.pft.addressbook.tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG./Users/annakhristanova/Documents/GitHub/MyFirstProject/addressbook-web-tests/src/test/resources/testng-groups.xml">
+  <component name="RunManager" selected="TestNG./Users/annakhristanova/Documents/GitHub/MyFirstProject/addressbook-web-tests/src/test/resources/testng-contacts.xml (1)">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -284,8 +280,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG./Users/annakhristanova/Documents/GitHub/MyFirstProject/addressbook-web-tests/src/test/resources/testng-groups.xml" />
         <item itemvalue="TestNG./Users/annakhristanova/Documents/GitHub/MyFirstProject/addressbook-web-tests/src/test/resources/testng-contacts.xml (1)" />
+        <item itemvalue="TestNG./Users/annakhristanova/Documents/GitHub/MyFirstProject/addressbook-web-tests/src/test/resources/testng-groups.xml" />
         <item itemvalue="Gradle.ContactCreationsTests.UserCreationTests" />
         <item itemvalue="Gradle.ContactCreationsTests" />
         <item itemvalue="TestNG./Users/annakhristanova/Documents/GitHub/MyFirstProject/addressbook-web-tests/src/test/resources/testng-contacts.xml" />
@@ -334,7 +330,10 @@
       <workItem from="1629655341738" duration="13338000" />
       <workItem from="1629826966000" duration="3978000" />
       <workItem from="1629833331347" duration="1550000" />
-      <workItem from="1629987429407" duration="11224000" />
+      <workItem from="1629987429407" duration="12888000" />
+      <workItem from="1630073239826" duration="10000" />
+      <workItem from="1630140827111" duration="56000" />
+      <workItem from="1630141001464" duration="255000" />
     </task>
     <servers />
   </component>

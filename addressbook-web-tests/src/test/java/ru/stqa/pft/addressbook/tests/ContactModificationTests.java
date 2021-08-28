@@ -13,9 +13,9 @@ public class ContactModificationTests extends TestBase{
 
     @BeforeMethod
     public void ensurePreconditions() {
-        app.get().contact().goToHomePage();
-        if (app.get().contact().all().size() == 0) {
-            app.get().contact().create(new UserData()
+        app.contact().goToHomePage();
+        if (app.contact().all().size() == 0) {
+            app.contact().create(new UserData()
                     .withFirstname("Anna").withLastname("Khristanova").withAddress("Petrozavodsk").withHomePhone("888"));
         }
 
@@ -23,16 +23,16 @@ public class ContactModificationTests extends TestBase{
 
     @Test
     public void testGroupModification() {
-        Users before = app.get().contact().all();
-        System.out.println("before=" + app.get().contact().all());
+        Users before = app.contact().all();
+        System.out.println("before=" + app.contact().all());
         UserData modifiedContact = before.iterator().next();
         UserData user = new UserData()
                 .withId(modifiedContact.getId())
                 .withFirstname("Anna500").withLastname("Khristanova500").withAddress("Petrozavodsk").withHomePhone("888");
-        app.get().contact().modify(user);
-        assertThat(app.get().contact().count(), equalTo(before.size()));
-        Users after = app.get().contact().all();
-        System.out.println("after=" + app.get().contact().all());
+        app.contact().modify(user);
+        assertThat(app.contact().count(), equalTo(before.size()));
+        Users after = app.contact().all();
+        System.out.println("after=" + app.contact().all());
         assertThat(after, equalTo(before.without(modifiedContact).withAdded(user)));
     }
 }

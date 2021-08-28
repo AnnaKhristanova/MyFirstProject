@@ -14,9 +14,9 @@ public class ContactEmailTest extends TestBase {
 
     @BeforeMethod
     public void ensurePreconditions() {
-        app.get().contact().goToHomePage();
-        if (app.get().contact().all().size() == 0) {
-            app.get().contact().create(new UserData()
+        app.contact().goToHomePage();
+        if (app.contact().all().size() == 0) {
+            app.contact().create(new UserData()
                     .withFirstname("Anna").withLastname("Khristanova").withAddress("Petrozavodsk").withHomePhone("888"));
         }
 
@@ -24,11 +24,11 @@ public class ContactEmailTest extends TestBase {
     @Test
     public void testContactPhones(){
 
-        UserData user = app.get().contact().all().iterator().next();
-        System.out.println("user=" + app.get().contact().all().iterator().next());
+        UserData user = app.contact().all().iterator().next();
+        System.out.println("user=" + app.contact().all().iterator().next());
 
-        UserData userInfoFromEditForm = app.get().contact().InfoFromEditForm(user);
-        System.out.println("userInfoFromEditForm=" + app.get().contact().InfoFromEditForm(user));
+        UserData userInfoFromEditForm = app.contact().InfoFromEditForm(user);
+        System.out.println("userInfoFromEditForm=" + app.contact().InfoFromEditForm(user));
 
         System.out.println("user=" + user.getAllEmails());
         System.out.println("userInfoFromEditForm=" + mergeEmails(userInfoFromEditForm));
