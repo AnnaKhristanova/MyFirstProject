@@ -1,23 +1,10 @@
 apply plugin: 'java'
 apply plugin: 'application'
 mainClassName = "MyFirstProject"
-test {
-    useTestNG()
-}
+
 repositories {
     mavenCentral()
 }
 dependencies {
     implementation 'org.testng:testng:7.4.0'
-}
-
-task testGroups(type: Test) {
-    useTestNG{
-        suites 'src/test/resources/testng-groups.xml'
-    }
-}
-task testContacts(type: Test) {
-    useTestNG{
-        suites 'src/test/resources/testng-contacts.xml'
-    }
 }
