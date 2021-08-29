@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aadf9a3a-9496-4da2-a30f-21dac28bc518" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/HbConnectionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/HbConnectionAboutContactsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/GroupData.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/GroupData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/UserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/HbConnectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/HbConnectionAboutGroupsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,11 +79,15 @@
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
       <map>
+        <entry key="JPA Inspector" value="true" />
+        <entry key="JPA Palette" value="true" />
         <entry key="JPA Structure" value="true" />
       </map>
     </option>
     <option name="myId2Visible">
       <map>
+        <entry key="JPA Inspector" value="false" />
+        <entry key="JPA Palette" value="false" />
         <entry key="JPA Structure" value="false" />
       </map>
     </option>
@@ -127,7 +131,7 @@
       <recent name="ru.stqa.pft.addressbook.tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.HbConnectionTest">
+  <component name="RunManager" selected="Gradle.HbConnectionAboutContactsTest">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -168,6 +172,27 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;ru.stqa.pft.addressbook.tests.DbConnectionTest.testDbConnection&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="HbConnectionAboutContactsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;ru.stqa.pft.addressbook.tests.HbConnectionAboutContactsTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -256,31 +281,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="/Users/annakhristanova/Documents/GitHub/MyFirstProject/addressbook-web-tests/src/test/resources/testng-groups.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/addressbook-web-tests/src/test/resources/testng-groups.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="TestNG.ContactCreationsTests" />
-      <item itemvalue="TestNG./Users/annakhristanova/Documents/GitHub/MyFirstProject/addressbook-web-tests/src/test/resources/testng-groups.xml" />
       <item itemvalue="TestNG./Users/annakhristanova/Documents/GitHub/MyFirstProject/addressbook-web-tests/src/test/resources/testng-contacts.xml (1)" />
       <item itemvalue="Gradle.DbConnectionTest" />
       <item itemvalue="Gradle.DbConnectionTest.testDbConnection" />
       <item itemvalue="Gradle.HbConnectionTest" />
+      <item itemvalue="Gradle.HbConnectionAboutContactsTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.HbConnectionAboutContactsTest" />
         <item itemvalue="Gradle.HbConnectionTest" />
         <item itemvalue="Gradle.DbConnectionTest" />
         <item itemvalue="Gradle.DbConnectionTest.testDbConnection" />
         <item itemvalue="TestNG./Users/annakhristanova/Documents/GitHub/MyFirstProject/addressbook-web-tests/src/test/resources/testng-contacts.xml (1)" />
-        <item itemvalue="TestNG./Users/annakhristanova/Documents/GitHub/MyFirstProject/addressbook-web-tests/src/test/resources/testng-groups.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -329,7 +344,7 @@
       <workItem from="1629987429407" duration="12888000" />
       <workItem from="1630073239826" duration="10000" />
       <workItem from="1630140827111" duration="56000" />
-      <workItem from="1630141001464" duration="5607000" />
+      <workItem from="1630141001464" duration="8049000" />
     </task>
     <servers />
   </component>

@@ -11,7 +11,7 @@ import ru.stqa.pft.addressbook.model.GroupData;
 
 import java.util.List;
 
-public class HbConnectionTest {
+public class HbConnectionAboutGroupsTest {
 
     private SessionFactory sessionFactory;
 
@@ -33,7 +33,7 @@ public class HbConnectionTest {
 }
 
     @Test
-    public void  testHbConnection(){
+    public void  testHbConnectionAboutGroups(){
 
         Session session = sessionFactory.openSession();
         session.beginTransaction();
