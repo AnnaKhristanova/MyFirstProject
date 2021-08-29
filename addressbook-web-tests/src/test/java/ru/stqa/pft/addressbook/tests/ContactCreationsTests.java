@@ -39,10 +39,12 @@ public class ContactCreationsTests extends TestBase{
   @Test(dataProvider = "validUsers")
   public void UserCreationTests(UserData user) throws Exception {
     app.contact().goToHomePage();
-    Users before = app.contact().all();
+    Users before = app.db().users();
+    System.out.println(before);
     app.contact().create(user);
     assertThat(app.contact().count(), equalTo(before.size() + 1));
-    Users after = app.contact().all();
+    Users after = app.db().users();
+    System.out.println(after);
     assertThat(after, equalTo(before.withAdded(user.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
   }
 

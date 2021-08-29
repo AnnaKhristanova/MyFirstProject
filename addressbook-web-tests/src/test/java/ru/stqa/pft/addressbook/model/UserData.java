@@ -1,9 +1,7 @@
 package ru.stqa.pft.addressbook.model;
-
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import org.hibernate.annotations.Type;
-
 import javax.persistence.*;
 import java.io.File;
 import java.util.Objects;
@@ -40,10 +38,28 @@ public class UserData {
     private String email3;
     @Transient
     private String allEmails;
-    @Column(name="photo")
-    @Type(type = "text")
+    @Transient
     private String photo;
 
+
+    @Override
+    public String toString() {
+        return "UserData{" +
+                "id=" + id +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", address='" + address + '\'' +
+                ", home='" + home + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", work='" + work + '\'' +
+                ", allPhones='" + allPhones + '\'' +
+                ", email='" + email + '\'' +
+                ", email2='" + email2 + '\'' +
+                ", email3='" + email3 + '\'' +
+                ", allEmails='" + allEmails + '\'' +
+                ", photo='" + photo + '\'' +
+                '}';
+    }
 
     public UserData withId(int id) {
         this.id = id;
@@ -134,17 +150,7 @@ public class UserData {
     public String getEmail3() {return email3;}
 
     public String getAllEmails() {return allEmails;}
-    public File getPhoto() {return new File(photo);}
 
-
-    @Override
-    public String toString() {
-        return "UserData{" +
-                "id=" + id +
-                ", firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                '}';
-    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -158,8 +164,7 @@ public class UserData {
         return Objects.hash(id, firstname, lastname);
     }
 
-
-
+    public File getPhoto() {return new File(photo);}
 }
 
 

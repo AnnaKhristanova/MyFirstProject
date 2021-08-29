@@ -12,7 +12,7 @@ public class ContactAddressTest extends TestBase {
     @BeforeMethod
     public void ensurePreconditions() {
         app.contact().goToHomePage();
-        if (app.contact().all().size() == 0) {
+        if (app.db().users().size()== 0) {
             app.contact().create(new UserData()
                     .withFirstname("Anna").withLastname("Khristanova").withAddress("Petrozavodsk").withHomePhone("888"));
         }
