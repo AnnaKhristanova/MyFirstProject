@@ -46,6 +46,7 @@ public class ContactCreationsTests extends TestBase{
     Users after = app.db().users();
     System.out.println(after);
     assertThat(after, equalTo(before.withAdded(user.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
+    verifyContactListInUIContacts();
   }
 
   @Test(enabled = false)

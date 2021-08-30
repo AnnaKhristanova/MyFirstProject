@@ -4,7 +4,10 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import org.hibernate.annotations.Type;
 import javax.persistence.*;
 import java.io.File;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
+
 @XStreamAlias("user")
 @Entity
 @Table(name="addressbook")
@@ -40,6 +43,14 @@ public class UserData {
     private String allEmails;
     @Transient
     private String photo;
+
+    public Groups getGroups() {
+        return new Groups(groups);
+    }
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name="address_in_groups", joinColumns = @JoinColumn(name="id"),inverseJoinColumns = @JoinColumn(name="group_id"))
+    private Set<GroupData> groups = new HashSet<GroupData>();
 
 
     @Override

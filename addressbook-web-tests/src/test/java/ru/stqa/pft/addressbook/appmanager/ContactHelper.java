@@ -8,7 +8,7 @@ import ru.stqa.pft.addressbook.model.Users;
 import java.util.List;
 
 
-public class ContactHelper extends HelperBase{
+public class ContactHelper extends HelperBase {
 
 
     private UserData user;
@@ -16,7 +16,11 @@ public class ContactHelper extends HelperBase{
     public ContactHelper(WebDriver wd) {
         super(wd);
     }
-    public void addNew() {click(By.linkText("add new"));}
+
+    public void addNew() {
+        click(By.linkText("add new"));
+    }
+
     public void fillContactForm(UserData userData) {
         type(By.name("firstname"), userData.getFirstname());
         type(By.name("lastname"), userData.getLastname());
@@ -26,13 +30,16 @@ public class ContactHelper extends HelperBase{
         click(By.xpath("//div[@id='content']/form/input[21]"));
     }
 
-    public void submitContactModification() {click(By.xpath("//div[@id='content']/form/input[22]"));
+    public void submitContactModification() {
+        click(By.xpath("//div[@id='content']/form/input[22]"));
     }
 
-    public void deleteContactHomePage() {click(By.xpath("//input[@value='Delete']"));
+    public void deleteContactHomePage() {
+        click(By.xpath("//input[@value='Delete']"));
     }
 
-    public void goToHomePage() {click(By.linkText("home"));
+    public void goToHomePage() {
+        click(By.linkText("home"));
     }
 
     public void AssertTrue() {
@@ -54,8 +61,8 @@ public class ContactHelper extends HelperBase{
         goToHomePage();
     }
 
-    private void initContactModificationById(int id)  {
-        wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']",id))).click();
+    private void initContactModificationById(int id) {
+        wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
     }
 
     public void delete(UserData user) {
@@ -75,8 +82,9 @@ public class ContactHelper extends HelperBase{
     public boolean isThereGroup() {
         return isElementPresent(By.name("selected[]"));
     }
+
     public int count() {
-        return  wd.findElements(By.name("selected[]")).size();
+        return wd.findElements(By.name("selected[]")).size();
     }
 
     private Users contactCache = null;
@@ -84,18 +92,18 @@ public class ContactHelper extends HelperBase{
 
     public Users all() {
 
-         if (contactCache != null){
-             return new Users(contactCache);
-         }
+        if (contactCache != null) {
+            return new Users(contactCache);
+        }
         contactCache = new Users();
         List<WebElement> elements = wd.findElements(By.cssSelector("tr[name=\"entry\"]"));
-        for (WebElement element: elements) {
+        for (WebElement element : elements) {
             String lastname = element.findElement(By.cssSelector("td:nth-child(2)")).getText();
             String firstname = element.findElement(By.cssSelector("td:nth-child(3)")).getText();
-            String  allPhones = element.findElement(By.cssSelector("td:nth-child(6)")).getText();
-            String  address = element.findElement(By.cssSelector("td:nth-child(4)")).getText();
-            String  allEmails = element.findElement(By.cssSelector("td:nth-child(5)")).getText();
-            int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute( "value"));
+            String allPhones = element.findElement(By.cssSelector("td:nth-child(6)")).getText();
+            String address = element.findElement(By.cssSelector("td:nth-child(4)")).getText();
+            String allEmails = element.findElement(By.cssSelector("td:nth-child(5)")).getText();
+            int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
             contactCache.add(new UserData().withId(id)
                     .withFirstname(firstname).withLastname(lastname).withAllPhones(allPhones).withAddress(address).withEmails(allEmails));
         }
@@ -119,4 +127,19 @@ public class ContactHelper extends HelperBase{
                 .withHomePhone(home).withMobilePhone(mobile).withWorkPhone(work).withAddress(address)
                 .withEmail(email).withEmail2(email2).withEmail3(email3);
     }
+
+    public void add(UserData user) {
+        selectContactHomePageById(user.getId());
+        addTo();
+        contactCache = null;
+        goToHomePage();
+    }
+
+    private void addTo() {
+        {
+            click(By.name("add"));
+        }
+    }
+
+
 }

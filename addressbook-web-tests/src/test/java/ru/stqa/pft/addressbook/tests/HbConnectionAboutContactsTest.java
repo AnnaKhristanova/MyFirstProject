@@ -39,10 +39,15 @@ public class HbConnectionAboutContactsTest {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         List<UserData> result = session.createQuery( "from UserData " ).list();
-        for ( UserData user : result ) {
-            System.out.println(user);
-        }
+
         session.getTransaction().commit();
         session.close();
+
+        for ( UserData user : result ) {
+            System.out.println(user);
+            System.out.println(user.getGroups());
+        }
+
+
     }
 }
