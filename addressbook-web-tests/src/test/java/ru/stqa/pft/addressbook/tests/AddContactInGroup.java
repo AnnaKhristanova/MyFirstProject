@@ -13,6 +13,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class AddContactInGroup extends TestBase {
 
+
     @BeforeMethod
     public void ensurePreconditions() {
         app.contact().goToHomePage();
@@ -22,16 +23,18 @@ public class AddContactInGroup extends TestBase {
         }
 
     }
+
     @Test
-    public void AddContactInGroupTests(UserData user) throws Exception {
+    public void testAddContactToGroup() {
         Users before = app.db().users();
         System.out.println(before);
         UserData modifiedContact = before.iterator().next();
+        UserData user = new UserData()
+                .withId(modifiedContact.getId())
+                .withFirstname("Anna500").withLastname("Khristanova500").withAddress("Petrozavodsk").withHomePhone("888");
         app.contact().add(user);
-        assertThat(app.contact().count(), equalTo(before.size()));
         Users after = app.db().users();
         System.out.println(after);
-        assertThat(after, equalTo(before.without(modifiedContact).withAdded(user)));
-        verifyContactListInUIContacts();
+        assertThat(after, equalTo(before));
     }
 }
