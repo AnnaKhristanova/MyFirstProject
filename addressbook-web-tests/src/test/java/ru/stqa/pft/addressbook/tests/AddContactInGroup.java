@@ -21,7 +21,6 @@ public class AddContactInGroup extends TestBase {
             app.contact().create(new UserData()
                     .withFirstname("Anna").withLastname("Khristanova").withAddress("Petrozavodsk").withHomePhone("888"));
         }
-
     }
 
     @Test

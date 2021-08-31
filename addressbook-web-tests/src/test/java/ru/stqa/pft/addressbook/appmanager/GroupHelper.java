@@ -3,12 +3,17 @@ package ru.stqa.pft.addressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.Groups;
+
+import java.util.Arrays;
 import java.util.List;
 
 
 public class GroupHelper extends HelperBase {
+
+    private WebElement element;
 
     public GroupHelper(WebDriver wd) {
         super(wd);
@@ -95,6 +100,31 @@ public class GroupHelper extends HelperBase {
             String name = element.getText();
             int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute( "value"));
             groupCache.add(new GroupData().withId(id).withName(name));
+        }
+        return new Groups(groupCache);
+    }
+    public void selectStringContactById(int id) {
+        element = wd.findElement(By.cssSelector("input[value='" + id + "']"));
+        element.isSelected();
+        if (!element.isSelected()) {
+            element.click();
+        }
+    }
+
+
+    public Groups allGroupsForDeletingContacts() {
+
+        if (groupCache != null){
+            return new Groups(groupCache);
+        }
+        groupCache = new Groups();
+        List<WebElement> elements = wd.findElements(By.name("group"));
+        for (WebElement element: elements){
+            new Select(wd.findElement(By.name("group"))).selectByVisibleText("test 2");
+            int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute( "value"));
+            selectStringContactById(id);
+            click(By.name("remove"));
+            
         }
         return new Groups(groupCache);
     }
