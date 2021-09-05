@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.Groups;
+import ru.stqa.pft.addressbook.model.Users;
 
 import java.util.Arrays;
 import java.util.List;
@@ -109,23 +110,5 @@ public class GroupHelper extends HelperBase {
         if (!element.isSelected()) {
             element.click();
         }
-    }
-
-
-    public Groups allGroupsForDeletingContacts() {
-
-        if (groupCache != null){
-            return new Groups(groupCache);
-        }
-        groupCache = new Groups();
-        List<WebElement> elements = wd.findElements(By.name("group"));
-        for (WebElement element: elements){
-            new Select(wd.findElement(By.name("group"))).selectByVisibleText("test 2");
-            int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute( "value"));
-            selectStringContactById(id);
-            click(By.name("remove"));
-            
-        }
-        return new Groups(groupCache);
     }
 }

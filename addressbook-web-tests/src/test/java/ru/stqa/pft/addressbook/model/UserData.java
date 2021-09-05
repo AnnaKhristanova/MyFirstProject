@@ -176,6 +176,11 @@ public class UserData {
     }
 
     public File getPhoto() {return new File(photo);}
+
+    public UserData inGroup(GroupData group) {
+        groups.add(group);
+        return this;
+    }
 }
 
 

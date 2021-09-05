@@ -3,15 +3,17 @@ package ru.stqa.pft.addressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.UserData;
 import ru.stqa.pft.addressbook.model.Users;
 import java.util.List;
+import java.util.Random;
 
 
 public class ContactHelper extends HelperBase {
 
 
-    private UserData user;
 
     public ContactHelper(WebDriver wd) {
         super(wd);
@@ -128,18 +130,14 @@ public class ContactHelper extends HelperBase {
                 .withEmail(email).withEmail2(email2).withEmail3(email3);
     }
 
+
     public void add(UserData user) {
         selectContactHomePageById(user.getId());
-        addTo();
-        contactCache = null;
-        goToHomePage();
-    }
-
-    private void addTo() {
-        {
-            click(By.name("add"));
+        click(By.name("add"));
         }
     }
 
 
-}
+
+
+

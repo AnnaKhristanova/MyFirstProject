@@ -24,22 +24,30 @@ public class RemoveContactFromGroup extends TestBase {
 
     @BeforeMethod
     public void ensurePreconditions() {
+
+        app.goTo().groupPage();
         if (app.db().groups().size() == 0) {
-            app.goTo().groupPage();
-            app.group().create(new GroupData().withName("test1").withFooter("test2").withHeader("test3"));
+            app.group().create(new GroupData().withName("testNew"));
         }
+        Groups groups = app.db().groups();
+        GroupData group = groups.iterator().next();
+        app.contact().goToHomePage();
         if (app.db().users().size() == 0) {
-            app.contact().goToHomePage();
-            app.contact().create(new UserData().withFirstname("Анна").withLastname("Христанова"));
+            app.contact().create(new UserData()
+                    .withFirstname("Anna").withLastname("Khristanova").withAddress("Petrozavodsk").withHomePhone("888"));
         }
+
+
     }
 
     @Test
     public void testRemoveContactFromGroup() throws Exception {
 
-        Groups dbGroups = app.db().groups();
+        Groups groups = app.db().groups();
+        Users users = app.db().users();
+
         app.contact().goToHomePage();
-        app.group().allGroupsForDeletingContacts();
+
 
 }
     }
