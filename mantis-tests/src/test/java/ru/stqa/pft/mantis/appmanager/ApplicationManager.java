@@ -1,6 +1,6 @@
 package ru.stqa.pft.mantis.appmanager;
 
-import com.google.common.base.Stopwatch;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -20,7 +20,8 @@ public class ApplicationManager {
     private final Properties properties;
     private WebDriver wd;
     private String browser;
-
+    private MailHelper mailHelper;
+    private RegistrationHelper registrationHelper;
 
 
     public ApplicationManager(String browser) {
@@ -58,13 +59,13 @@ public class ApplicationManager {
 
 
     public WebDriver getDriver() {
-        if (wd==null){
+        if (wd == null) {
 
             if (browser.equals(BrowserType.FIREFOX)) {
                 wd = new FirefoxDriver();
             } else if (browser.equals(BrowserType.CHROME)) {
                 wd = new ChromeDriver();
-            } else if (browser.equals(BrowserType.IE)){
+            } else if (browser.equals(BrowserType.IE)) {
                 wd = new InternetExplorerDriver();
             }
 
@@ -72,5 +73,21 @@ public class ApplicationManager {
             wd.get(properties.getProperty("web.baseUrl"));
         }
         return wd;
+    }
+
+    public MailHelper mail() {
+        if (mailHelper == null) {
+            mailHelper = new MailHelper(this);
+
+        }
+        return mailHelper;
+    }
+
+
+    public RegistrationHelper registration() {
+        if (registrationHelper == null) {
+            registrationHelper = new RegistrationHelper(this);
+        }
+        return registrationHelper;
     }
 }
