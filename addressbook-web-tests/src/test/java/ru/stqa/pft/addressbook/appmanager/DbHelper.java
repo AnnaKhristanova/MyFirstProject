@@ -12,9 +12,10 @@ import ru.stqa.pft.addressbook.model.Users;
 
 import java.util.List;
 
-public class DbHelper {
+public class DbHelper{
 
     private final SessionFactory sessionFactory;
+    private int id;
 
 
     public DbHelper(){
@@ -40,4 +41,16 @@ public class DbHelper {
         session.close();
         return new Users(result);
     }
+    
+    public UserData user(int id) {
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        UserData result = (UserData) session.createQuery( "from UserData where id = :idParam" );
+        result.setParameter("idParam", id);
+        session.getTransaction().commit();
+        session.close();
+        return new UserData(result);
+    }
+
+
 }

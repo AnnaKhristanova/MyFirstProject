@@ -14,6 +14,7 @@ public class AddContactInGroup extends TestBase {
     private int counter;
     private Groups before;
     private Groups after;
+    private int id;
 
 
     @BeforeMethod
@@ -43,7 +44,9 @@ public class AddContactInGroup extends TestBase {
                 before = user.getGroups();
                 app.contact().add(user);
                 counter = 1;
-                after = user.getGroups();
+                id = user.getId();
+                UserData modyfiedUser = app.db().user(id);
+                after = modyfiedUser.getGroups();
                 break;
             } else {
                 counter = 0;
@@ -55,7 +58,9 @@ public class AddContactInGroup extends TestBase {
             before = user.getGroups();
             app.contact().create(user);
             app.contact().add(user);
-            after = user.getGroups();
+            id = user.getId();
+            UserData modyfiedUser = app.db().user(id);
+            after = modyfiedUser.getGroups();
         }
         assertNotEquals(before, after);
 

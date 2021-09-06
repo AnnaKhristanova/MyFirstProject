@@ -12,6 +12,8 @@ import java.util.Set;
 @Entity
 @Table(name="addressbook")
 public class UserData {
+    @Transient
+    private UserData delegate;
     @XStreamOmitField
     @Id
     @Column(name="id")
@@ -43,6 +45,14 @@ public class UserData {
     private String allEmails;
     @Transient
     private String photo;
+
+    public UserData(UserData user) {this.delegate = new UserData(user.delegate);
+    }
+
+    public UserData() {
+
+    }
+
 
     public Groups getGroups() {
         return new Groups(groups);
@@ -180,6 +190,12 @@ public class UserData {
     public UserData inGroup(GroupData group) {
         groups.add(group);
         return this;
+    }
+
+    public UserData setParameter(String idParam, int id) {
+        this.id = id;
+        return this;
+
     }
 }
 
