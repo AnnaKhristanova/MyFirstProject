@@ -23,13 +23,13 @@ public class RegistrationTest extends TestBase {
     @Test
     public void testRegistration() throws InterruptedException, IOException {
 
-        String user =  "user1";
+        String user =  "user12";
         String password = "password";
-        String email = "user33@localhost.localdomain";
+        String email = "user37@localhost.localdomain";
         app.registration().start(  user, email);
         List<MailMessage> mailMessages = app.mail().waitForMail(2, 100000);
         String confirmationLink = findConfirmationLink(mailMessages, email);
-        app.registration().finish(confirmationLink);
+        app.registration().finish(confirmationLink, password);
         assertTrue(app.newSession().login(user, password));
         Thread.sleep(2000);
     }
