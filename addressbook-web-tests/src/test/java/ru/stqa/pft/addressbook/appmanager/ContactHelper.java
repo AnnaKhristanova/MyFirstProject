@@ -131,13 +131,11 @@ public class ContactHelper extends HelperBase {
     }
 
 
-    public void add(UserData user) {
+    public void addTo(UserData user) {
+        goToHomePage();
         selectContactHomePageById(user.getId());
         click(By.name("add"));
-        }
+        contactCache = null;
+        goToHomePage();
     }
-
-
-
-
-
+}

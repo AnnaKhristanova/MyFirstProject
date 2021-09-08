@@ -42,7 +42,7 @@ public class AddContactInGroup extends TestBase {
         for (UserData user: users) {
             if (user.getGroups().size() == 0) {
                 before = user.getGroups();
-                app.contact().add(user);
+                app.contact().addTo(user);
                 counter = 1;
                 id = user.getId();
                 UserData modyfiedUser = app.db().user(id);
@@ -57,7 +57,7 @@ public class AddContactInGroup extends TestBase {
                     .withFirstname("Anna").withLastname("Khristanova").withAddress("Petrozavodsk").withHomePhone("888");
             before = user.getGroups();
             app.contact().create(user);
-            app.contact().add(user);
+            app.contact().addTo(user);
             id = user.getId();
             UserData modyfiedUser = app.db().user(id);
             after = modyfiedUser.getGroups();
