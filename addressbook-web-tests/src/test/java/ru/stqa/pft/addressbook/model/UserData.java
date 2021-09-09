@@ -46,7 +46,8 @@ public class UserData {
     @Transient
     private String photo;
 
-    public UserData(UserData user) {this.delegate = new UserData(user.delegate);
+    public UserData(UserData result) {
+
     }
 
     public UserData() {

@@ -23,9 +23,9 @@ public class RegistrationTest extends TestBase {
     @Test
     public void testRegistration() throws InterruptedException, IOException {
 
-        String user =  "user12";
+        String user =  "user28";
         String password = "password";
-        String email = "user37@localhost.localdomain";
+        String email = "user28@localhost.localdomain";
         app.registration().start(user, email);
         List<MailMessage> mailMessages = app.mail().waitForMail(2, 100000);
         String confirmationLink = findConfirmationLink(mailMessages, email);
