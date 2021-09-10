@@ -38,6 +38,7 @@ public class ContactHelper extends HelperBase {
 
     public void deleteContactHomePage() {
         click(By.xpath("//input[@value='Delete']"));
+
     }
 
     public void goToHomePage() {
@@ -77,6 +78,7 @@ public class ContactHelper extends HelperBase {
 
     private void selectContactHomePageById(int id) {
         wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
+        contactCache = null;
 
     }
 
@@ -137,5 +139,25 @@ public class ContactHelper extends HelperBase {
         click(By.name("add"));
         contactCache = null;
         goToHomePage();
+    }
+
+    public void selectGroupFromMenuList(GroupData group) {
+        goToHomePage();
+        selectGroupFromMenuListById(group.getId());
+        contactCache = null;
+    }
+    public void selectGroupFromMenuListById(int id) {
+        wd.findElement(By.xpath("//select[@name='group']")).click();
+        wd.findElement(By.xpath("//option[@value='" + id + "']")).click();
+    }
+
+    public void selectContactFromList(UserData user) {
+        selectContactHomePageById(user.getId());
+        contactCache = null;
+    }
+
+    public void removeContactFromGroup() {
+        wd.findElement(By.xpath("//input[@name='remove']")).click();
+
     }
 }

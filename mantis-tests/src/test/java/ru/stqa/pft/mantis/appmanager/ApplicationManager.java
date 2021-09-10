@@ -22,6 +22,7 @@ public class ApplicationManager {
     private String browser;
     private MailHelper mailHelper;
     private RegistrationHelper registrationHelper;
+    private PanelHelper panelHelper;
 
 
     public ApplicationManager(String browser) {
@@ -89,5 +90,11 @@ public class ApplicationManager {
             registrationHelper = new RegistrationHelper(this);
         }
         return registrationHelper;
+    }
+    public PanelHelper panel() {
+        if (panelHelper == null) {
+            panelHelper = new PanelHelper(this);
+        }
+        return panelHelper;
     }
 }

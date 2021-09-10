@@ -17,7 +17,7 @@ public class DbHelper {
 
     private final SessionFactory sessionFactory;
     private int id;
-
+    private UserData result;
 
     public DbHelper() {
         final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
@@ -53,7 +53,7 @@ public class DbHelper {
         UserData result = (UserData) ((org.hibernate.query.Query<?>) query).uniqueResult();
         session.getTransaction().commit();
         session.close();
-        return new UserData(result);
+        return result;
     }
 }
 

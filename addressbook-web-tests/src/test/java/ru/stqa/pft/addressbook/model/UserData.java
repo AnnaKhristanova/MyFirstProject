@@ -12,8 +12,7 @@ import java.util.Set;
 @Entity
 @Table(name="addressbook")
 public class UserData {
-    @Transient
-    private UserData delegate;
+
     @XStreamOmitField
     @Id
     @Column(name="id")
@@ -45,14 +44,6 @@ public class UserData {
     private String allEmails;
     @Transient
     private String photo;
-
-    public UserData(UserData result) {
-
-    }
-
-    public UserData() {
-
-    }
 
 
     public Groups getGroups() {
