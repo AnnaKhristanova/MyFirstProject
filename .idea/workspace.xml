@@ -5,18 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aadf9a3a-9496-4da2-a30f-21dac28bc518" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rest-sample/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-sample/chromedriver" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-sample/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-sample/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-sample/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-sample/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/Issue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/RestAssuredTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/RestTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-sample/src/test/resources/geoipservice.wsdl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/appmanager/ApplicationManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/TestBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-sample/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/rest-sample/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/Issue.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/Issue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/RestTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/RestTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/soap-sample/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/soap-sample/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,9 +50,30 @@
         <task path="$PROJECT_DIR$/addressbook-web-tests">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/rest-sample">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="addressbook-web-tests" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="addressbook-web-tests" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="rest-sample" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="rest-sample" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="sandbox" type="f1a62948:ProjectNode" />
@@ -78,6 +94,7 @@
       <list>
         <option value="Kotlin Class" />
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -153,6 +170,7 @@
       <recent name="java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.stqa.pft.rest.appmanager" />
       <recent name="ru.stqa.pft.rest.tests" />
       <recent name="ru.stqa.pft.mantis.appmanager" />
       <recent name="ru.stqa.pft.mantis.tests" />
@@ -236,12 +254,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SoapTests.testCreateIssue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestBase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/mantis-tests" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/rest-sample" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.stqa.pft.mantis.tests.SoapTests.testCreateIssue&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.stqa.pft.rest.tests.TestBase&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -257,12 +275,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SoapTests.testGetProjects" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestBase.isIssueOpen" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/mantis-tests" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/rest-sample" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.stqa.pft.mantis.tests.SoapTests.testGetProjects&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.stqa.pft.rest.tests.TestBase.isIssueOpen&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -302,20 +320,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.SoapTests.testGetProjects" />
-      <item itemvalue="Gradle.SoapTests.testCreateIssue" />
       <item itemvalue="Gradle.SoapTests" />
       <item itemvalue="TestNG.ContactCreationsTests" />
       <item itemvalue="Gradle.RestTests" />
       <item itemvalue="Gradle.RestAssuredTests" />
+      <item itemvalue="Gradle.TestBase.isIssueOpen" />
+      <item itemvalue="Gradle.TestBase" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.RestTests" />
+        <item itemvalue="Gradle.TestBase.isIssueOpen" />
+        <item itemvalue="Gradle.TestBase" />
         <item itemvalue="Gradle.RestAssuredTests" />
         <item itemvalue="Gradle.SoapTests" />
-        <item itemvalue="Gradle.SoapTests.testCreateIssue" />
-        <item itemvalue="Gradle.SoapTests.testGetProjects" />
       </list>
     </recent_temporary>
   </component>
@@ -384,7 +402,7 @@
       <workItem from="1631363588181" duration="58000" />
       <workItem from="1631363657371" duration="1418000" />
       <workItem from="1631367059929" duration="3938000" />
-      <workItem from="1631374610566" duration="6937000" />
+      <workItem from="1631374610566" duration="11705000" />
     </task>
     <servers />
   </component>
@@ -524,8 +542,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/RestTests.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="78" />
+          <line>25</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/TestBase.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/appmanager/PanelHelper.java</url>

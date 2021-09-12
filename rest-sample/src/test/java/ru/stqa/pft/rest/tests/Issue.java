@@ -7,6 +7,7 @@ public class Issue {
     private int id;
     private String subject;
     private String description;
+    private String state_name;
 
     public Issue withId(int id) {
         this.id = id;
@@ -46,5 +47,9 @@ public class Issue {
 
     public String getDescription() {
         return description;
+    }
+
+    public String getState_name() {
+        return state_name;
     }
 }

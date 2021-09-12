@@ -8,6 +8,7 @@ import com.jayway.restassured.RestAssured;
 import org.apache.http.client.fluent.Executor;
 import org.apache.http.client.fluent.Request;
 import org.apache.http.message.BasicNameValuePair;
+import org.testng.SkipException;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -15,18 +16,24 @@ import java.util.Set;
 
 import static org.testng.Assert.assertEquals;
 
-public class RestTests {
+public class RestTests extends TestBase{
 
     @Test
     public void testCreateIssue() throws IOException {
+        try {
         Set<Issue> oldIssues = getIssues();
         Issue newIssue = new Issue().withSubject("AnnaTest").withDescription("AnnaTest");
         int issueId = createIssue(newIssue);
+        skipIfNotFixed(issueId);
         Set<Issue> newIssues = getIssues();
         oldIssues.add(newIssue.withId(issueId));
         assertEquals(newIssues, oldIssues);
+    }catch (SkipException  e){
+            System.out.println("Ignored because of issue ");
+        }
+        }
 
-    }
+
     private int createIssue(Issue newIssue) throws IOException {
         String json = getExecutor().execute(Request.Post("https://bugify.stqa.ru/api/issues.json")
                 .bodyForm(new BasicNameValuePair("subject", newIssue.getSubject()),
