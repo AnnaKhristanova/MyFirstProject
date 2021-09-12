@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aadf9a3a-9496-4da2-a30f-21dac28bc518" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/appmanager/ApplicationManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/TestBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-sample/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/rest-sample/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/Issue.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/Issue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/RestTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/RestTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/soap-sample/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/soap-sample/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/SoapTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/SoapTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +173,7 @@
       <recent name="ru.stqa.pft.addressbook.tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RestTests">
+  <component name="RunManager" selected="Gradle.SoapTests">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -329,11 +325,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SoapTests" />
         <item itemvalue="Gradle.RestTests" />
         <item itemvalue="Gradle.TestBase.isIssueOpen" />
         <item itemvalue="Gradle.TestBase" />
         <item itemvalue="Gradle.RestAssuredTests" />
-        <item itemvalue="Gradle.SoapTests" />
       </list>
     </recent_temporary>
   </component>
@@ -402,7 +398,7 @@
       <workItem from="1631363588181" duration="58000" />
       <workItem from="1631363657371" duration="1418000" />
       <workItem from="1631367059929" duration="3938000" />
-      <workItem from="1631374610566" duration="11705000" />
+      <workItem from="1631374610566" duration="13592000" />
     </task>
     <servers />
   </component>
@@ -542,13 +538,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/RestTests.java</url>
-          <line>25</line>
+          <line>26</line>
           <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/TestBase.java</url>
           <line>37</line>
           <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/SoapTests.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/TestBase.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="86" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/appmanager/PanelHelper.java</url>

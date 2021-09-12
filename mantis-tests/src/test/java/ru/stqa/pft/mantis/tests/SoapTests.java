@@ -1,6 +1,7 @@
 package ru.stqa.pft.mantis.tests;
 
 
+import org.testng.SkipException;
 import org.testng.annotations.Test;
 import ru.stqa.pft.mantis.model.Issue;
 import ru.stqa.pft.mantis.model.Project;
@@ -13,8 +14,11 @@ import static org.testng.Assert.assertEquals;
 
     public class SoapTests extends TestBase {
 
+        private Issue created;
+
         @Test
         public void testGetProjects() throws MalformedURLException, ServiceException, RemoteException {
+
             Set<Project> projects = app.soap().getProjects();
             System.out.println(projects.size());
             for (Project project : projects) {
@@ -24,12 +28,19 @@ import static org.testng.Assert.assertEquals;
 
         @Test
         public void testCreateIssue() throws MalformedURLException, ServiceException, RemoteException {
-            Set<Project> projects = app.soap().getProjects();
-            Issue issue = new Issue().withSumary("Test issue111")
-                    .withDescription("Test issue description111").withProject(projects.iterator().next());
-            Issue created = app.soap().addIssue(issue);
-            assertEquals(issue.getSumary(), created.getSumary());
+            try {
+                Set<Project> projects = app.soap().getProjects();
+                Issue issue = new Issue().withSumary("Test issue222")
+                        .withDescription("Test issue description222").withProject(projects.iterator().next());
+                created = app.soap().addIssue(issue);
+                int issueId = created.getId();
+                skipIfNotFixed(issueId);
+                assertEquals(issue.getSumary(), created.getSumary());
+            } catch (SkipException e) {
+                System.out.println("Ignored because of issue ");
+            }
+
 
         }
-    }
 
+    }
