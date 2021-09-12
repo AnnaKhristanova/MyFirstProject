@@ -5,24 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aadf9a3a-9496-4da2-a30f-21dac28bc518" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/appmanager/SoapHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/model/Issue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/model/Project.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/SoapTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soap-sample/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soap-sample/chromedriver" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soap-sample/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soap-sample/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soap-sample/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soap-sample/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soap-sample/src/test/resources/geoipservice.wsdl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-sample/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-sample/chromedriver" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-sample/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-sample/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-sample/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-sample/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/Issue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/RestAssuredTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/RestTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-sample/src/test/resources/geoipservice.wsdl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mantis-tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/appmanager/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mantis-tests/src/test/resources/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/src/test/resources/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +31,9 @@
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/mantis-tests">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/rest-sample">
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/sandbox">
@@ -79,6 +76,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin Class" />
         <option value="Class" />
       </list>
     </option>
@@ -142,6 +140,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.stqa.pft.rest.tests" />
       <recent name="ru.stqa.pft.mantis.appmanager" />
       <recent name="ru.stqa.pft.addressbook.appmanager" />
       <recent name="ru.stqa.pft.addressbook" />
@@ -154,12 +153,13 @@
       <recent name="java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.stqa.pft.rest.tests" />
       <recent name="ru.stqa.pft.mantis.appmanager" />
       <recent name="ru.stqa.pft.mantis.tests" />
       <recent name="ru.stqa.pft.addressbook.tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SoapTests">
+  <component name="RunManager" selected="Gradle.RestTests">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -173,12 +173,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChangePasswordTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RestAssuredTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/mantis-tests" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/rest-sample" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.stqa.pft.mantis.tests.ChangePasswordTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.stqa.pft.rest.tests.RestAssuredTests&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -194,12 +194,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="RemoveContactFromGroup" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RestTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/rest-sample" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.stqa.pft.addressbook.tests.RemoveContactFromGroup&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.stqa.pft.rest.tests.RestTests&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -302,20 +302,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.RemoveContactFromGroup" />
-      <item itemvalue="Gradle.ChangePasswordTest" />
-      <item itemvalue="TestNG.ContactCreationsTests" />
       <item itemvalue="Gradle.SoapTests.testGetProjects" />
       <item itemvalue="Gradle.SoapTests.testCreateIssue" />
       <item itemvalue="Gradle.SoapTests" />
+      <item itemvalue="TestNG.ContactCreationsTests" />
+      <item itemvalue="Gradle.RestTests" />
+      <item itemvalue="Gradle.RestAssuredTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.RestTests" />
+        <item itemvalue="Gradle.RestAssuredTests" />
         <item itemvalue="Gradle.SoapTests" />
         <item itemvalue="Gradle.SoapTests.testCreateIssue" />
         <item itemvalue="Gradle.SoapTests.testGetProjects" />
-        <item itemvalue="Gradle.ChangePasswordTest" />
-        <item itemvalue="Gradle.RemoveContactFromGroup" />
       </list>
     </recent_temporary>
   </component>
@@ -383,7 +383,8 @@
       <workItem from="1631356640381" duration="5323000" />
       <workItem from="1631363588181" duration="58000" />
       <workItem from="1631363657371" duration="1418000" />
-      <workItem from="1631367059929" duration="3537000" />
+      <workItem from="1631367059929" duration="3938000" />
+      <workItem from="1631374610566" duration="6937000" />
     </task>
     <servers />
   </component>
@@ -520,6 +521,11 @@
           <url>file://$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/ChangePasswordTest.java</url>
           <line>36</line>
           <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/pft/rest/tests/RestTests.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/appmanager/PanelHelper.java</url>
