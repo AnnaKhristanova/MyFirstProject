@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aadf9a3a-9496-4da2-a30f-21dac28bc518" name="Default Changelist" comment="" />
+    <list default="true" id="aadf9a3a-9496-4da2-a30f-21dac28bc518" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/sandbox/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/build.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -169,7 +171,7 @@
       <recent name="ru.stqa.pft.addressbook.tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SoapTests">
+  <component name="RunManager" selected="Gradle.PointTests.testDistance">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -183,12 +185,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestAssuredTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PointTests.testDistance" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/rest-sample" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/sandbox" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.stqa.pft.rest.tests.RestAssuredTests&quot;" />
+        <option name="scriptParameters" value="--tests &quot;PointTests.testDistance&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -313,19 +315,19 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.SoapTests" />
-      <item itemvalue="TestNG.ContactCreationsTests" />
       <item itemvalue="Gradle.RestTests" />
-      <item itemvalue="Gradle.RestAssuredTests" />
       <item itemvalue="Gradle.TestBase.isIssueOpen" />
       <item itemvalue="Gradle.TestBase" />
+      <item itemvalue="TestNG.ContactCreationsTests" />
+      <item itemvalue="Gradle.PointTests.testDistance" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.PointTests.testDistance" />
         <item itemvalue="Gradle.SoapTests" />
         <item itemvalue="Gradle.RestTests" />
         <item itemvalue="Gradle.TestBase.isIssueOpen" />
         <item itemvalue="Gradle.TestBase" />
-        <item itemvalue="Gradle.RestAssuredTests" />
       </list>
     </recent_temporary>
   </component>
@@ -395,6 +397,7 @@
       <workItem from="1631363657371" duration="1418000" />
       <workItem from="1631367059929" duration="3938000" />
       <workItem from="1631374610566" duration="14057000" />
+      <workItem from="1631643385183" duration="22000" />
     </task>
     <servers />
   </component>
