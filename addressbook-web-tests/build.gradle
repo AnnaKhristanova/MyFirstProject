@@ -16,6 +16,9 @@ task testGroups(type: Test) {
     if (project.hasProperty('verifyUI')){
         systemProperty 'verifyUI', "${verifyUI}"
     }
+    if (project.hasProperty('platform')){
+        systemProperty 'platform', "${platform}"
+    }
 }
 task testContacts(type: Test) {
     useTestNG {
@@ -29,6 +32,9 @@ task testContacts(type: Test) {
     }
     if (project.hasProperty('verifyUI')){
         systemProperty 'verifyUI', "${verifyUI}"
+    }
+    if (project.hasProperty('platform')){
+        systemProperty 'platform', "${platform}"
     }
 }
 repositories {
